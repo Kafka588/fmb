@@ -3,7 +3,7 @@
     <button class="nav-icon-btn bars-container" aria-label="menu">
         <i class="fas fa-bars nav-icon"></i>
     </button>
-    <a href="{{route('index')}}" class="nav-link center"><img src="assets/udemy-logo.svg" alt="udemy-logo" class="nav-logo" /></a>
+    <a href="{{route('index')}}" class="nav-link center"><img src="{{asset('assets/udemy-logo.svg')}}" alt="udemy-logo" class="nav-logo" /></a>
     <nav>
         <a href="{{route('index')}}" class="nav-link">
             <p class="nav-text">Бүх сургалт</p>

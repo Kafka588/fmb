@@ -73,7 +73,7 @@
     <nav>
       <button class="nav-btn nav-active">
         <i class="fas fa-tachometer-alt"></i>
-        Үндсэн
+        Hello,{{session('user')}}
       </button>
       <button class="nav-btn">
         <i class="fas fa-hand-holding-usd"></i>

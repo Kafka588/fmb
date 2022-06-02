@@ -14,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', [FMB::class, 'index','FMB@index'])->name('index');
 Route::get('/signup', [FMB::class, 'signup','FMB@signup'])->name('signup');
-Route::get('/login', [FMB::class, 'login', 'FMB@login'])->name('login');
 Route::get('/cart', [FMB::class, 'cart', 'FMB@cart'])->name('cart');
 Route::get('/teacher', [FMB::class, 'teacher', 'FMB@teacher'])->name('teacher');
-Route::get('/lesson', [FMB::class, 'lesson', 'FMB@lesson'])->name('lesson');
+Route::get('/lesson/{lecture}', [FMB::class, 'lesson', 'FMB@lesson'])->name('lesson');
+Route::get('/login', [FMB::class, 'login', 'FMB@login'])->name('login');
+Route::get('/category/{category}', [FMB::class, 'cat'])->name('catLecture');

@@ -3,8 +3,8 @@
 <main>
     <div class="poster">
         <img style="width: 100%" src="{{asset('assets/home-bg-desktop.jpg')}}" srcset="
-        assets/home-bg-tablet.jpg 770w,
-        assets/home-bg-mobile.jpg 360w
+        {{asset('assets/home-bg-tablet.jpg')}} 770w,
+        {{asset('assets/home-bg-mobile.jpg')}} 360w
       " sizes="(max-width: 1000px) 770px, (max-width: 769px) 360px" alt="background-image" />
         <form class="poster-search-container">
             <label>
@@ -28,22 +28,22 @@
     </div>
     <hr />
     <div class="cards-container">
-        @foreach ($Courses as $co)
+        @foreach ($catCourse as $cn)
         <div class="card-container">
-            <a href="{{route('lesson',$co->id)}}">
-                <img src="{{asset($co->img)}}" srcset="assets/Course/Sales_Training.jpg 1x, assets/Course/Sales_Training.jpg 2x" alt="Course" class="card-image" />
+            <a href="{{route('lesson',$cn->id)}}">
+                <img src="{{asset('assets/Course/Sales_Training.jpg')}}" srcset="{{asset('assets/Course/Sales_Training.jpg')}} 1x, assets/Course/Sales_Training.jpg 2x" alt="Course" class="card-image" />
                 <h2 class="card-title">
-                   {{$co->title}}
+                   {{$cn->title}}
                 </h2>
-                <small class="card-teacher">{{$co->user}}</small>
+                <small class="card-teacher">{{$cn->user}}</small>
                 <div class="card-rating-container">
-                    <span>&#11088; {{$co->rating}}</span>
-                    <span>({{$co->subers}})</span>
+                    <span>&#11088; {{$cn->rating}}</span>
+                    <span>({{$cn->subers}})</span>
                 </div>
                 <div class="card-price">
-                    <span>₮{{$co->price}}</span><small>₮{{$co->sale}}</small>
+                    <span>₮{{$cn->price}}</span><small>₮{{$cn->sale}}</small>
                 </div>
-                <small class="card-best">{{$co->mark}}</small>
+                <small class="card-best">{{$cn->mark}}</small>
             </a>
         </div>
         @endforeach
