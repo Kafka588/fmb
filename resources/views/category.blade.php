@@ -30,7 +30,7 @@
     <div class="cards-container">
         @foreach ($catCourse as $cn)
         <div class="card-container">
-            <a href="{{route('lesson',$cn->id)}}">
+            <a href="{{route('login',$cn->id)}}">
                 <img src="{{asset('assets/Course/Sales_Training.jpg')}}" srcset="{{asset('assets/Course/Sales_Training.jpg')}} 1x, assets/Course/Sales_Training.jpg 2x" alt="Course" class="card-image" />
                 <h2 class="card-title">
                    {{$cn->title}}

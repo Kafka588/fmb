@@ -169,18 +169,23 @@
   .profit-list {
     padding: 0 5%;
   }
+
   .profit-title {
     font-size: 10px;
   }
+
   .profit-number {
     font-size: 16px;
   }
+
   .statistic-title {
     font-size: 11px;
   }
+
   .statistic-number {
     font-size: 18px;
   }
+
   .teachers-title {
     font-size: 18px;
   }
@@ -190,47 +195,61 @@
   .profit-list {
     padding: 0 15px;
   }
+
   .profit-title {
     font-size: 10px;
   }
+
   .profit-number {
     font-size: 14px;
   }
+
   .statistic-title {
     font-size: 8px;
   }
+
   .statistic-number {
     font-size: 14px;
   }
+
   .teachers-item {
     margin: 15px 0;
   }
+
   .teachers-title {
     font-size: 18px;
   }
+
   .teachers-list-name {
     font-size: 12px;
     margin-left: 35px;
   }
+
   .teachers-list-img {
     width: 24px;
     height: 24px;
   }
+
   .teachers-list-number {
     padding: 4px 8px;
     font-size: 12px;
   }
+
   .diff-img {
     height: 20px;
   }
+
   .diff-name {
     font-size: 12px;
   }
+
   .progress {
     height: 5px;
   }
+
   .diff-percent {
     margin: 5px 0 5px 3px;
     font-size: 12px;
   }
+
 }

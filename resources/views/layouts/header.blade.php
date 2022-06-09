@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/main.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/cart.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/lesson.css')}}" />
+    
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link
       rel="icon"
