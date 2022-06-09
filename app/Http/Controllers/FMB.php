@@ -20,11 +20,10 @@ class FMB extends Controller
         return view('login');
     }
     public function cart(){
-        return view('cart');
+        $Courses = Course::OrderByDesc('id')->limit(15)->get();
+        return view('cart', compact('Courses'));
     }
-    public function teacher(){
-        return view('teacher-panel');
-    }
+    
     public function cat(category $category){
         $catCourse = Course::find($category);
         return view('category', compact('catCourse'));

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Course;
+use App\Models\Course as ModelsCourse;
+use App\Models\Category as ModelsCategory;
 
 class Category extends Controller
 {
@@ -11,9 +14,16 @@ class Category extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function panel()
     {
-        //
+        $allCourses = ModelsCourse::orderByDesc('id')->get();
+        $Category = ModelsCategory::orderByDesc('id')->get();
+        $Courses = Course::OrderByDesc('id')->limit(15)->get();
+        return view('admin.panel', compact(['Courses', 'Category','allCourses']));
+        
+    }
+    public function income(){
+        return view('admin.income');
     }
 
     /**
@@ -23,7 +33,7 @@ class Category extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.category_add');
     }
 
     /**
@@ -34,7 +44,10 @@ class Category extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cat = new ModelsCategory;
+        $cat->name = $request->cat_name;
+        $cat->save();
+        return redirect('admin/home');
     }
 
     /**
@@ -54,9 +67,10 @@ class Category extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(ModelsCategory $cat)
     {
-        //
+        $oneCategory = ModelsCategory::find($cat);
+        return view('admin.category_edit', compact('oneCategory'));
     }
 
     /**
@@ -68,7 +82,10 @@ class Category extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $justCat = ModelsCategory::find($id);
+        $justCat->name = $request->cat_name;
+        $justCat->update();
+        return redirect('admin/home');
     }
 
     /**
@@ -77,8 +94,9 @@ class Category extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(ModelsCategory $Category)
     {
-        //
+        $Category->delete();
+        return redirect('admin/home');
     }
 }

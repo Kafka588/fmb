@@ -131,38 +131,57 @@ main {
 }
 
 @media only screen and (max-width: 1061px) and (min-width: 501px) {
+
   .bars-container,
   body {
     display: block;
   }
+
   nav,
   .header-right {
     display: none;
   }
+
   .half-fit {
     width: 100%;
   }
 }
 
 @media only screen and (max-width: 500px) {
+
   .bars-container,
   body {
     display: block;
   }
+
   nav,
   .header-right {
     display: none;
   }
+
   .half-fit {
     width: 100%;
   }
+
   .nav-icon {
     font-size: 18px;
   }
+
   .welcome-text {
     font-size: 12px;
   }
+
   .panel-nav-title {
     font-size: 18px;
   }
+}
+
+.cat-add {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }

@@ -20,7 +20,7 @@
         </form>
     </div>
     <div class="main-title-container">
-        <button class="main-title">Бүх сургалтууд</button>
+        <a href="{{route('index')}}"><button class="main-title">Бүх сургалтууд</button></a>
         @foreach ($category as $c)
         <a href="{{route('catLecture', $c->id)}}"><button class="main-title">{{$c->name}}</button></a>
         @endforeach

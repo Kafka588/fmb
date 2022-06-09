@@ -14,9 +14,7 @@
             </button>
             <input type="text" placeholder="Хайх..." class="nav-search-input" />
         </div>
-        <a href="{{route('teacher')}}" class="nav-link">
-            <p class="nav-text">Хичээл заах</p>
-        </a>
+        <a href=""></a>
         <a href="{{route('cart')}}" class="nav-link nav-icon"><i class="fas fa-shopping-cart nav-icon"></i></a>
         <div class="nav-btn-container">
             <a href="{{route('login')}}" class="nav-btn login-btn">Нэвтрэх</a>

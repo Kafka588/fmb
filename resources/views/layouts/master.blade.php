@@ -19,6 +19,7 @@
 
     @yield('lesson')
     <!-- Footer starting -->
+
     @include('layouts.footer')
     <!-- Footer end -->
     
