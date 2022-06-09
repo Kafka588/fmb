@@ -2,20 +2,15 @@
 @section('content')
 <main>
     <div class="poster">
-        <img style="width: 100%" src="{{asset('assets/home-bg-desktop.jpg')}}" srcset="
-        {{asset('assets/home-bg-desktop.jpg')}} 770w,
-        {{asset('assets/home-bg-desktop.jpg')}} 360w
+        <img style="width: 100%" src="{{asset('assets/background.jpg')}}" srcset="
+        {{asset('assets/background.jpg')}} 770w,
+        {{asset('assets/background.jpg')}} 360w
       " sizes="(max-width: 1000px) 770px, (max-width: 769px) 360px" alt="background-image" />
         <form class="poster-search-container">
             <label>
-                <h3 class="poster-search-title">Ирээдүйгээ гэрэлтүүл</h3>
-                <p class="poster-search-alert">Бүх сургалтууд 10/29 дуустал 29,900₮ хямдралтай байна</p>
-                <div class="poster-input-search-container">
-                    <button class="poster-icon-btn" aria-label="search-bottom">
-                        <i class="fas fa-search nav-icon"></i>
-                    </button>
-                    <input type="text" placeholder="Хайх..." class="poster-search-input" />
-                </div>
+                <h3 class="poster-search-title">New to Udemy? Lucky you.</h3>
+                <p class="poster-search-alert">Courses start at $13.99. Get your new-student offer before it expires.</p>
+            
             </label>
         </form>
     </div>

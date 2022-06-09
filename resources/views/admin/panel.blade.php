@@ -7,11 +7,8 @@
         </button>
         <div class="header-left">
           <h1 class="panel-nav-title">Хяналтын самбар</h1>
-          <p class="welcome-text">Тавтай морил, Наранбат</p>
         </div>
         <div class="header-right">
-          <img src="{{asset('assets/man1.png')}}" alt="profile" />
-          <p class="username-text">Наранбат М.</p>
         </div>
         <section class="fit cards-container">
        

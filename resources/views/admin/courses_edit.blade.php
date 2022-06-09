@@ -13,10 +13,14 @@
             <div >
                 <label for="">Нэр</label>
                 <input class="create-input" type="text" name="title" value="{{$c->title}}">
+                <label for="">Тайлбар</label>
+                <input class="create-input" type="text" name="description" value="{{$c->description}}">
                 <label for="">User</label>
                 <input class="create-input" type="text" name="user" value="{{$c->user}}">
                 <label for="">Image</label>
                 <input class="create-input" type="File" name="img" value="{{$c->img}}">
+                <label for="">Video</label>
+                <input class="create-input" type="File" name="video" value="{{$c->video}}">
                 <label for="">Price</label>
                 <input class="create-input" type="text" name="price" value="{{$c->price}}">
                 <label for="">Sale</label>

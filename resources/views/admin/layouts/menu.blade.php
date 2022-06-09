@@ -2,7 +2,7 @@
         <button class="nav-btn">
             <a href="{{route('panel')}}">
             <i class="fas fa-tachometer-alt"></i>
-            Hello,{{session('user')}}
+            Hello
             </a>
         </button>
         <a href="{{route('cat_create')}}" class="">
@@ -17,10 +17,12 @@
             Сургалт
         </button>
         </a>
+        <a href="{{route('students')}}">
         <button class="nav-btn">
             <i class="fas fa-user-graduate"></i>
             Сурагчид
         </button>
+    </a>
         <a href="{{route('index')}}">
         <button class="nav-btn">
             <i class="fas fa-sign-out-alt"></i>

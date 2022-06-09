@@ -12,10 +12,14 @@
             <div >
                 <label for="">Нэр</label>
                 <input class="create-input" type="text" name="title" >
+                <label for="">Тайлбар</label>
+                <input class="create-input" type="text" name="description" >
                 <label for="">User</label>
                 <input class="create-input" type="text" name="user" >
                 <label for="">Image</label>
                 <input class="create-input" type="File" name="img">
+                <label for="">Video</label>
+                <input class="create-input" type="File" name="video">
                 <label for="">Price</label>
                 <input class="create-input" type="text" name="price" >
                 <label for="">Sale</label>
@@ -37,7 +41,7 @@
                         user-select: none;" value="{{$c->id}}">{{$c->name}}</option>
                     @endforeach
                     </select></div>
-                <button class="create-btn" type="submit" name="submit" value="insert" style="margin-top:20px">Add</button>
+                <button class="create-btn" type="submit" name="submit" value="insert" style="margin-top:20px">Save</button>
             </div>
         </form>
     </section>

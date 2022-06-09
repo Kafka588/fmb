@@ -33,6 +33,7 @@ Route::put('/admin/category/update/{id}', [Category::class, 'update'])->name('ca
 Route::delete('/admin/category/delete/{category}', [Category::class, 'destroy'])->name('cat_delete');
 
 Route::get('/admin/courses', [Course::class, 'index'])->name('course');
+Route::get('/admin/students', [Course::class, 'students'])->name('students');
 Route::get('/admin/courses/create', [Course::class, 'create'])->name('course_create');
 Route::post('/admin/courses/store', [Course::class, 'store'])->name('course_store');
 Route::get('/admin/course/update/{courses}', [Course::class, 'edit'])->name('course_edit');

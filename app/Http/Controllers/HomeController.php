@@ -45,6 +45,6 @@ class HomeController extends Controller
     {
         $Courses = Course::OrderByDesc('id')->limit(15)->get();
         $category = Category::get();
-        return view('simple_user.lesson',compact('lecture'));
+        return view('simple_user.lesson',compact(['lecture','Courses']));
     }
 }

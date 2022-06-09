@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Course as ModelsCourse;
 use App\Models\Category;
+use App\Models\User;
 class Course extends Controller
 {
     /**
@@ -16,6 +17,11 @@ class Course extends Controller
     {
         $allCourses = ModelsCourse::orderByDesc('id')->get();
         return view('admin.courses_set', compact('allCourses'));
+    }
+    public function students()
+    {
+        $allUser = User::orderByDesc('id')->get();
+        return view('admin.students', compact('allUser'));
     }
 
     /**
@@ -39,8 +45,11 @@ class Course extends Controller
     {
         $img = $request->file('img')->getClientOriginalName();
         $zurag = $request->img->move('assets/course', $img);
+        $video = $request->file('video')->getClientOriginalName();
+        $bichleg = $request->video->move('assets/course', $video);
         $courses = new ModelsCourse();
         $courses->title = $request->title;
+        $courses->description = $request->description;
         $courses->user = $request->user;
         $courses->price = $request->price;
         $courses->sale = $request->sale;
@@ -49,6 +58,7 @@ class Course extends Controller
         $courses->subers = $request->subs;
         $courses->cat_id = $request->cat_id;
         $courses->img = $zurag;
+        $courses->video = $bichleg;
         $courses->save();
         return redirect()->route('panel');
     }
@@ -87,10 +97,13 @@ class Course extends Controller
     public function update(Request $request, $id)
     {
         $img = $request->file('img')->getClientOriginalName();
+        $video = $request->file('video')->getClientOriginalName();
         $justCat = ModelsCourse::find($id);
         $justCat->title = $request->title;
+        $justCat->description = $request->description;
         $justCat->user = $request->user;
         $justCat->img = $request->img;
+        $justCat->video = $request->video;
         $justCat->price = $request->price;
         $justCat->sale = $request->sale;
         $justCat->mark = $request->mark;

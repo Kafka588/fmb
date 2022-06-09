@@ -70,7 +70,7 @@
   </head>
   <body>
     <!-- Header Starting -->
-    @extends('layouts.master')
+    @extends('simple_user.layouts.master')
     <!-- Header End -->
     @section('lesson')
     <main>
@@ -79,74 +79,25 @@
       <div class="main-bottom">
         <div class="video-container">
           <video controls>
-            <source src="{{asset('assets/Videos/Sales Training_ Practical Sales Techniques.mp4')}}" />
+            <source src="{{$lecture->video}}" />
           </video>
           <div class="description-btn-ul">
             <button class="description-li-btn li-active">
               Сургалтын талаар
             </button>
-            <button class="description-li-btn">Багшийн талаар</button>
+            <button class="description-li-btn">{{$lecture->user}}</button>
           </div>
           <div class="description">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-              vitae, vero et ipsam id, esse sequi natus quo nesciunt impedit
-              soluta. Laudantium voluptatibus aperiam sit nisi ipsam fuga
-              dolorum sunt! Lorem ipsum, dolor sit amet consectetur adipisicing
-              elit. Delectus perferendis quasi, animi aperiam libero ipsa neque
-              deleniti voluptatem laboriosam enim illo nam ratione cum
-              consectetur fugit placeat quo corporis aliquam. Lorem ipsum dolor
-              sit, amet consectetur adipisicing elit. Illum voluptate quos qui
-              veritatis et explicabo voluptas ipsum, eveniet facere porro amet
-              quibusdam quasi temporibus aliquid rerum eos ex. Excepturi,
-              suscipit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Quisquam, amet perspiciatis nesciunt, quaerat modi quas sint
-              veniam maiores facere architecto esse, voluptatum sit explicabo
-              quod dolorem itaque! Sunt, voluptate laudantium.
+              {{$lecture->description}}
             </p>
           </div>
         </div>
         <section class="content-container">
           <h2 class="content-title">Агуулга</h2>
-          <a href="" class="content-list-btn content-active">
+          <a href="{{route('lesson',$lecture->id)}}" class="content-list-btn content-active">
             <i class="far fa-play-circle"></i>
-            <p class="lesson-title">1. Хичээлийн танилцуулга</p>
-            <p class="lesson-time">5:03</p>
-          </a>
-          <a href="" class="content-list-btn">
-            <i class="fas fa-lock"></i>
-            <p class="lesson-title">2. Хичээлийн танилцуулга</p>
-            <p class="lesson-time">15:03</p>
-          </a>
-          <a href="" class="content-list-btn">
-            <i class="fas fa-lock"></i>
-            <p class="lesson-title">3. Хичээлийн танилцуулга</p>
-            <p class="lesson-time">5:03</p>
-          </a>
-          <a href="" class="content-list-btn">
-            <i class="fas fa-lock"></i>
-            <p class="lesson-title">4. Хичээлийн танилцуулга</p>
-            <p class="lesson-time">5:03</p>
-          </a>
-          <a href="" class="content-list-btn">
-            <i class="fas fa-lock"></i>
-            <p class="lesson-title">5. Хичээлийн танилцуулга</p>
-            <p class="lesson-time">5:03</p>
-          </a>
-          <a href="" class="content-list-btn">
-            <i class="fas fa-lock"></i>
-            <p class="lesson-title">6. Хичээлийн танилцуулга</p>
-            <p class="lesson-time">5:03</p>
-          </a>
-          <a href="" class="content-list-btn">
-            <i class="fas fa-lock"></i>
-            <p class="lesson-title">7. Хичээлийн танилцуулга</p>
-            <p class="lesson-time">5:03</p>
-          </a>
-          <a href="" class="content-list-btn">
-            <i class="fas fa-lock"></i>
-            <p class="lesson-title">8. Хичээлийн танилцуулга</p>
-            <p class="lesson-time">5:03</p>
+            <p class="lesson-title">{{$lecture->id}}. {{$lecture->title}}</p>
           </a>
         </section>
       </div>
